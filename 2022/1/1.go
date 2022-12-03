@@ -1,4 +1,4 @@
-// go run 1.go
+// go run 1.go to run file
 
 package main
 
