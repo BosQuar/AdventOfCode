@@ -1,5 +1,14 @@
 const fs = require("fs");
 
+const dict = new Map();
+
+for (i = 0; i < 26; i++) {
+  const letter = (i + 10).toString(36);
+
+  dict.set(letter, i + 1);
+  dict.set(letter.toUpperCase(), i + 1 + 26);
+}
+
 const doubles = [];
 const allRucksacks = [];
 
@@ -29,15 +38,6 @@ try {
   });
 } catch (err) {
   console.error(err);
-}
-
-const dict = new Map();
-
-for (i = 0; i < 26; i++) {
-  const letter = (i + 10).toString(36);
-
-  dict.set(letter, i + 1);
-  dict.set(letter.toUpperCase(), i + 1 + 26);
 }
 
 let sum = 0;
